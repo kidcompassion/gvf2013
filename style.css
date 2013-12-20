@@ -1,0 +1,305 @@
+/******************************************************************
+
+/*
+ Theme Name:     Twenty Thirteen Child
+ Theme URI:      http://example.com/twenty-thirteen-child/
+ Description:    Twenty Thirteen Child Theme
+ Author:         John Doe
+ Author URI:     http://example.com
+ Template:       twentythirteen
+ Version:        1.0.0
+ */
+/**************************************************************************/
+/* VARIABLES 
+---------------------------------------------------------------------------------------------------------------------------*/
+.show {
+  display: block; }
+
+.hide {
+  display: show; }
+
+.text-shadow {
+  text-shadow: 2px 2px 7px #000; }
+
+.black-text a {
+  color: black; }
+
+.black {
+  background-color: black; }
+
+.white {
+  background-color: white; }
+
+.gvf_yellow {
+  background-color: #efa40c; }
+
+.gvf_pink {
+  background-color: #d35554; }
+
+.gvf_green {
+  background-color: #3aaa95; }
+
+/*RESET/OVERRIDE BOOTSTRAP CSS 
+---------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------GLOBAL STYLES---------------------------- */
+body {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  color: black; }
+
+.padding {
+  padding: 15px; }
+
+.no-padding, .page-header {
+  padding: 0px; }
+
+.no-margin {
+  margin: 0; }
+
+.absolute {
+  position: absolute; }
+
+.relative {
+  position: relative; }
+
+.full-width {
+  width: 100%; }
+
+.center {
+  text-align: center; }
+
+.left {
+  float: left; }
+
+.right, .nav-align {
+  float: right; }
+
+.clearfix {
+  clear: both; }
+
+.bold {
+  font-weight: bold; }
+
+h1 {
+  font-family: "Oswald", arial, sans-serif;
+  color: black;
+  text-transform: uppercase;
+  font-size: 3rem; }
+
+h2 {
+  font-family: "Oswald", arial, sans-serif;
+  color: white;
+  text-transform: capitalize; }
+
+h3 {
+  font-family: "Oswald", arial, sans-serif;
+  color: white;
+  font-size: 1.25em; }
+
+h4 {
+  font-family: "Oswald", arial, sans-serif;
+  color: white; }
+
+li {
+  list-style-type: none; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+a {
+  color: white; }
+
+.fa {
+  font-size: 2rem;
+  padding: 0 10px; }
+
+.fa-facebook {
+  color: #3aaa95; }
+
+.fa-twitter {
+  color: #d35554; }
+
+.fa-youtube-square {
+  color: #efa40c; }
+
+/*--------------------------------GLOBAL TEMPLATE STYLES---------------------------------------*/
+.main-nav {
+  background-color: transparent;
+  font-family: "Oswald", arial, sans-serif;
+  z-index: 99999;
+  max-height: none; }
+  .main-nav a {
+    color: black; }
+
+.header {
+  height: 400px; }
+
+.footer {
+  text-align: center;
+  font-size: 0.75em; }
+
+.social-footer {
+  text-align: right; }
+
+/*----------------------------------HOME PAGE STYLES---------------------------------------------*/
+.overlay {
+  height: 100%;
+  background-image: url(../globalvisions2013/image/bg.png); }
+
+.sticky-header {
+  height: 450px;
+  overflow: hidden;
+  color: white;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.page-header {
+  height: 450px;
+  overflow: hidden;
+  background-color: red; }
+
+.center {
+  display: block;
+  padding: 75px 0; }
+
+/*----------------------------------CONTENT PAGE STYLES-----------------------------------------*/
+/*-----------------------------------POST STYLES------------------------------------------------*/
+/* BLOG
+=======================*/
+.blog-post-wrapper {
+  padding: 0px;
+  margin: 0px;
+  height: 300px;
+  position: relative;
+  color: white;
+  /* date */ }
+  .blog-post-wrapper h3 {
+    line-height: 1em;
+    position: absolute;
+    font-size: 28px;
+    color: white;
+    font-family: "Oswald", arial, sans-serif;
+    padding: 15px 30px; }
+  .blog-post-wrapper p {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 75%; }
+  .blog-post-wrapper .blog-post-date-bg {
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 20;
+    border-top: 130px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-right: 130px solid white; }
+  .blog-post-wrapper .blog-post-date {
+    bottom: 3%;
+    right: 3%;
+    z-index: 25;
+    font-family: "Oswald", arial, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: black; }
+
+.thumb-size {
+  height: 150px;
+  width: 150px;
+  display: block; }
+
+/*------------------------------------EVENT STYLES-----------------------------------------------*/
+.table-header-wrap {
+  background-color: black;
+  color: white;
+  padding-top: 7.5px; }
+
+.event-date {
+  font-weight: bold;
+  font-size: 1.75rem;
+  padding: 15px;
+  background-color: #e5e5e5; }
+
+.event-title a {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline; }
+
+.screening-listing {
+  padding: 7.5px 0;
+  border-bottom: solid 1px #999; }
+
+/*------------------------------------SPONSOR STYLES---------------------------------------------*/
+.sponsors {
+  padding: 15px; }
+  .sponsors a {
+    color: #3aaa95; }
+
+/*------------------------------------ARCHIVE STYLES---------------------------------------------*/
+/*------------------------------------SIDEBAR STYLES---------------------------------------------*/
+/*------------------------------------RESPONSIVE STYLES---------------------------------------------*/
+@media (max-width: 767px) {
+  .nav-align {
+    float: left; }
+
+  /*-----EVENTS------*/
+  .table-header-wrap {
+    display: none; }
+
+  .screening-listing {
+    border: none; }
+
+  .screening-listing:nth-child(odd) {
+    background-color: #e5e5e5; }
+
+  .event-date {
+    font-weight: bold;
+    font-size: 1.75rem;
+    padding: 15px;
+    background-color: black;
+    color: white; }
+
+  .footer {
+    padding: 30px; }
+
+  .social-footer {
+    text-align: left; }
+
+  .fa {
+    font-size: 4rem;
+    padding: 0 10px; }
+
+  .credit {
+    text-align: left;
+    padding: 15px; } }
+@media (min-width: 768px) {
+  .table-header-wrap {
+    display: none; }
+
+  .event-date {
+    font-weight: bold;
+    font-size: 1.75rem;
+    padding: 15px;
+    background-color: black;
+    color: white; }
+
+  .screening-listing:nth-child(odd) {
+    background-color: #e5e5e5; }
+
+  .footer {
+    padding: 30px; } }
+@media (min-width: 992px) {
+  .event-date {
+    font-weight: bold;
+    font-size: 1.75rem;
+    padding: 15px;
+    background-color: #e5e5e5;
+    color: black; }
+
+  .table-header-wrap {
+    display: block; }
+
+  .screening-listing:nth-child(odd) {
+    background-color: transparent; } }
