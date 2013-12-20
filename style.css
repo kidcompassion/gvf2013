@@ -44,17 +44,20 @@
 /*----------------------GLOBAL STYLES---------------------------- */
 body {
   font-family: helvetica, arial, sans-serif;
-  font-size: 16px;
+  font-size: 1.5rem;
   color: black; }
 
-.padding {
+.padding, .screening-meta p {
   padding: 15px; }
+
+.margin-top-bottom {
+  margin: 15px 0; }
 
 .no-padding, .page-header {
   padding: 0px; }
 
-.no-margin {
-  margin: 0; }
+.no-margin, .page-header {
+  margin: 0px; }
 
 .absolute {
   position: absolute; }
@@ -156,9 +159,8 @@ a {
   background-repeat: no-repeat; }
 
 .page-header {
-  height: 450px;
-  overflow: hidden;
-  background-color: red; }
+  height: 350px;
+  overflow: hidden; }
 
 .center {
   display: block;
@@ -230,6 +232,11 @@ a {
 .screening-listing {
   padding: 7.5px 0;
   border-bottom: solid 1px #999; }
+
+.screening-meta {
+  margin-top: 60px; }
+  .screening-meta p {
+    background-color: #e5e5e5; }
 
 /*------------------------------------SPONSOR STYLES---------------------------------------------*/
 .sponsors {

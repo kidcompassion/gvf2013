@@ -18,34 +18,49 @@ single-bookmarks.php
 <div class="container">
 	<div class="row">
 
-		<div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
+
+		<div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 									<h1><?php the_title();?></h1>
 									
-									<div class="row">
-									<p class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">Screening date:<?php the_field('screening_date');?></p>
-									<p class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">Screening time:<?php the_field('screening_time');?></p>
-									<p class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">Screening location: <?php the_field('screening_location');?></p>
+									<div class="table-header-wrap row">
+									<p class="table-header col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">Screening date</p>
+									<p class="table-header col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">Screening time</p>
+									<p class="table-header col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">Screening location</p>
+									</div>
+
+									<div class="margin-top-bottom row">
+									<p class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+
+
+
+									<?php
+									$date = DateTime::createFromFormat('Ymd', get_field(screening_date));
+									echo $date->format('M d, Y'); //changes date syntax?>
+									</p>
+									<p class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12"><?php the_field('screening_time');?></p>
+									<p class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12"><?php the_field('screening_location');?></p>
 									</div>
 									<?php if (the_field('movie_trailer')):?>
 									<p><?php the_field('movie_trailer');?></p>
 									<?php endif;?>
+									<p>
 									<?php the_content(); ?>
+								</p>
 
-									<p>Price: <?php the_field('ticket_price');?></p>
+									<p>Price: $<?php the_field('ticket_price');?></p>
 							<?php endwhile; ?>
 
 							<?php else : ?>
-
+							Sorry, there is no content here.
 									
 							<?php endif; ?>
 
 					</div>
-					<div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
-
-						<?php get_sidebar(); ?>
-</div>
+				<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+				<?php get_sidebar(); ?>
+			</div>
 				</div> <!-- end #inner-content -->
 
 			</div> <!-- end #content -->

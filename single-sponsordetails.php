@@ -14,27 +14,40 @@ single-bookmarks.php
 ?>
 
 <?php get_header(); ?>
-
-			<div id="container">
+<div class="container">
 
 				<div class="row">
 
-				
-
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-									<?php the_content(); ?>
+						<article class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
 
-				
-
-							<?php endwhile; ?>
-
-							<?php else : ?>
+								<header class="article-header">
 
 									
+						
+									<p class="subheadline">		
+									<a href="<?php echo the_field('sponsor_url');?>"><h1><?php the_title(); ?></h1>
+										<?php the_post_thumbnail('thumbnail');?>
+									</a>
+									</p>
+
+								</header> <!-- end article header -->
+
+								<section>
+									<?php the_content(); ?>
+							</section> <!-- end article section -->
+
+								
+								<?php comments_template(); ?>
+
+							</article> <!-- end article -->
+
+							<?php endwhile; else : ?>
+
+								
 
 							<?php endif; ?>
-
 
 						<?php get_sidebar(); ?>
 

@@ -19,10 +19,10 @@
 								<section>
 									<?php the_content(); ?>
 							</section> <!-- end article section -->
-
+							<section>
 								
 								<?php comments_template(); ?>
-
+							</section>
 							</article> <!-- end article -->
 
 							<?php endwhile; else : ?>

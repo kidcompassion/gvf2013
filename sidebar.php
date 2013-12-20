@@ -20,16 +20,14 @@ echo get_avatar($authoravatar);
 <div class="pull_quote"><?php the_field( 'pull_quote' );?></div>
 </div>
 <?php elseif (get_post_type() === 'screeningdetails'):?>
-	dkjfdjshfdl
-		<p>Title: <?php the_title();?></p>
-									<p>Country of origin: <?php the_field('country_of_origin'); ?></p>
-									<p>Production year: <?php the_field('year_of_production'); ?></p>
-									<p>Running time: <?php the_field('running_time');?></p>
-									<p>Director: <?php the_field('director');?></p>
-									<p>Language: <?php the_field('language');?></p>
-									<p>Website: <?php the_field('website');?></p>
-
-
+	<div class="screening-meta">
+	<p>Country: <?php the_field('country_of_origin'); ?></p>
+	<p>Production year: <?php the_field('year_of_production'); ?></p>
+	<p>Running time: <?php the_field('running_time');?></p>
+	<p>Director: <?php the_field('director');?></p>
+	<p>Language: <?php the_field('language');?></p>
+	<p><a href="<?php the_field('website');?>">View the Website</a></p>
+</div>
 <?php else:?>
 <div id="sidebar" class="sidebar col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12" role="complementary">
 	<?php if ( dynamic_sidebar('sidebar') ) : else : endif; ?>

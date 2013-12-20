@@ -40,12 +40,13 @@ $gvf_grey: #e5e5e5;
 ---------------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------GLOBAL STYLES---------------------------- */
-body { font-family: helvetica, arial, sans-serif; font-size: 16px; color: $black;}
+body { font-family: helvetica, arial, sans-serif; font-size: 1.5rem; color: $black;}
 
 .padding { padding: $base-padding; }
-
+.margin-top-bottom { margin: $base-margin 0;}
 .no-padding { padding: 0px; }
-.no-margin { margin: 0; }
+.no-margin { margin: 0px; }
+
 .absolute { position: absolute; }
 .relative { position: relative; }
 
@@ -129,11 +130,10 @@ a { color: $white; }
 }
 
 .page-header{
-	height: 450px;
+	height: 350px;
 	overflow:hidden;
-	background-color:red;
 	@extend .no-padding;
-	
+	@extend .no-margin;
 } 
 
 .center {
@@ -244,7 +244,13 @@ a { color: $white; }
 	border-bottom: solid 1px #999;
 }
 
-
+.screening-meta {
+	margin-top: $base-margin*4;
+	p{
+		@extend .padding; 
+		background-color: $gvf_grey;
+	}
+}
 
 /*------------------------------------SPONSOR STYLES---------------------------------------------*/
 
